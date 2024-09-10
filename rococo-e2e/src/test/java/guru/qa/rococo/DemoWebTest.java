@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 @WebTest
-public class DemoWebTest {
+class DemoWebTest {
 
   @BeforeEach
   void addAllureSelenide() {
