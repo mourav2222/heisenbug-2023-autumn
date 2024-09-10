@@ -1,4 +1,3 @@
--- noinspection SqlDialectInspectionForFile
 
 DELETE
 FROM `rococo-api`.`user`;
