@@ -55,6 +55,9 @@ delete from `rococo-api`.`artist`;
 delete from `rococo-api`.`museum`;
 delete from `rococo-api`.`country`;
 
+insert into `country` (name) value ('Russia');
+insert into `country` (name) value ('France');
+
 insert into `country` (name) value ('Австралия');
 insert into `country` (name) value ('Австрия');
 insert into `country` (name) value ('Азербайджан');
