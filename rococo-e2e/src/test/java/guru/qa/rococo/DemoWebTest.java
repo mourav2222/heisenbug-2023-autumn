@@ -35,8 +35,8 @@ class DemoWebTest {
   }
 
   @CsvSource({
-      "123, Утро в сосновом лесу",
-      "124, Над вечным покоем"
+      "123, Morning in a pine forest",
+      "124, Above eternal peace"
   })
   @ApiLogin(username = "ivan", password = "12345")
   @ParameterizedTest
@@ -54,7 +54,7 @@ class DemoWebTest {
   @Test
   void museumNameShouldEditedByAuthorizedUser() {
     $$("nav.list-nav a").find(text("Музеи")).click();
-    $$("div.text-center").find(text("Эрмитаж")).parent().click();
+    $$("div.text-center").find(text("Hermitage")).parent().click();
     $("[data-testid='edit-museum']").click();
     $("input[name='title']").setValue("Edited");
     $("button[type='submit']").click();
@@ -66,7 +66,7 @@ class DemoWebTest {
   @Test
   void artistNameShouldEditedByAuthorizedUser() {
     $$("nav.list-nav a").find(text("Художники")).click();
-    $$("span.flex-auto").find(text("Шишкин")).parent().click();
+    $$("span.flex-auto").find(text("Shishkin")).parent().click();
     $("[data-testid='edit-artist']").click();
     $("input[name='name']").setValue("Edited");
     $("button[type='submit']").click();
