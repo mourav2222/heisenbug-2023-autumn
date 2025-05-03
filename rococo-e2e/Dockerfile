@@ -8,4 +8,4 @@ COPY ./build.gradle ./
 COPY ./settings.gradle ./
 COPY ./gradle.properties ./
 
-CMD ./gradlew clean test -Dtest.env=docker
+CMD ./gradlew clean test -Dtest.env=docker -i
