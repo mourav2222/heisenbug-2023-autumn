@@ -9,8 +9,8 @@ docker_images="$(docker images --format '{{.Repository}}:{{.Tag}}' | grep 'rococ
 
 if [ ! -z "$docker_containers" ]; then
   echo "### Stop containers: $docker_containers ###"
-  docker stop $(docker ps -a -q)
-  docker rm $(docker ps -a -q)
+  docker stop $(docker ps -a | grep rococo | awk ' { print $1 }')
+  docker rm $(docker ps -a | grep rococo | awk ' { print $1 }')
 fi
 if [ ! -z "$docker_images" ]; then
   echo "### Remove images: $docker_images ###"
@@ -26,4 +26,4 @@ docker build --build-arg PROFILE=${PROFILE} -t dtuchs/rococo-client-${PROFILE}:$
 cd ../
 docker images
 PROFILE="${PROFILE}" docker compose up -d
-docker ps -a
+docker ps -a | grep rococo

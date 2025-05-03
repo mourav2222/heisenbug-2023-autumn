@@ -1,4 +1,4 @@
-rootProject.name = 'heisenbug-2023-autumn'
+rootProject.name = 'rococo'
 include 'rococo-api'
 include 'rococo-auth'
 include 'rococo-e2e'
