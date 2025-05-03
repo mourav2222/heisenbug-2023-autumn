@@ -9,7 +9,7 @@ import retrofit2.http.Path;
 
 public interface GhApi {
 
-  @GET("repos/dtuchs/heisenbug-2023-autumn/issues/{ISSUE_NUMBER}")
+  @GET("repos/mourav2222/rococo/issues/{ISSUE_NUMBER}")
   @Headers({
       "Accept: application/vnd.github+json",
       "X-GitHub-Api-Version: 2022-11-28"

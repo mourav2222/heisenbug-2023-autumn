@@ -1,6 +1,6 @@
 FROM eclipse-temurin:21-jdk
 
-WORKDIR /heisenbug-2023-autumn
+WORKDIR /rococo
 COPY ./gradle ./gradle
 COPY ./rococo-e2e ./rococo-e2e
 COPY ./gradlew ./
