@@ -57,8 +57,8 @@ jobs:
         with:
           script: |
             const exitCode = ${{ steps.e2e-tests.outputs.e2e_exit_code }}
-            const reportUrl = 'https://allure.niffler-stage.qa.guru/api/allure-docker-service/projects/rococo/reports/latest/index.html'
-            const historyUrl = 'https://allure.niffler-stage.qa.guru/allure-docker-service-ui/projects/rococo'
+            const reportUrl = 'https://allure.mxytin-rt.duckdns.org/api/allure-docker-service/projects/rococo/reports/latest/index.html'
+            const historyUrl = 'https://allure.mxytin-rt.duckdns.org/allure-docker-service-ui/projects/rococo'
             const message = exitCode == '0' ?
               `✅ Goodbye, ROCOCO ✅ There is the [report](${reportUrl})\n🕓 All reports [history](${historyUrl})` :
               `🔴 TEST RUN FAILED 🔴 There is the [report](${reportUrl})\n🕓 All reports [history](${historyUrl})`
