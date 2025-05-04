@@ -10,6 +10,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.net.CookieManager;
 import java.net.CookiePolicy;
+import java.util.concurrent.TimeUnit;
 
 public abstract class RestService {
 
@@ -20,7 +21,10 @@ public abstract class RestService {
 
   public RestService(String baseUrl, boolean followRedirect, Interceptor... interceptors) {
     OkHttpClient.Builder builder = new OkHttpClient.Builder()
-        .followRedirects(followRedirect);
+            .connectTimeout(30, TimeUnit.SECONDS)  // time to establish connection
+            .readTimeout(30, TimeUnit.SECONDS)     // time to wait for data
+            .writeTimeout(30, TimeUnit.SECONDS)
+            .followRedirects(followRedirect);
 
     if (interceptors != null) {
       for (Interceptor interceptor : interceptors) {
